@@ -1,11 +1,30 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'File Tree to JSON Action'
+description: 'An action to write the directory structure starting at the provided path to an output json or yaml file.'
+author: 'adairrr'
 inputs:
-  milliseconds: # change this
+  search-path:
+    description: 'Path where searching files'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  max-depth:
+    description: 'Max depth to search files'
+    default: '10'
+    required: false
+  only-dirs:
+    description: 'Only include directories'
+    default: 'false'
+    required: false
+  extension:
+    description: 'Only include files with this extension'
+    default: ''
+    required: false
+  end-with-array:
+    description: 'If there are still more files and max depth has been reached, include as an array?'
+    default: 'false'
+    required: false
+
+outputs:
+  tree:
+    description: 'JSON file tree'
 runs:
   using: 'node16'
   main: 'dist/index.js'
