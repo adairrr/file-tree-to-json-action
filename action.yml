@@ -1,5 +1,5 @@
 name: 'File Tree to JSON Action'
-description: 'An action to write the directory structure starting at the provided path to an output json or yaml file.'
+description: 'An action to write the directory structure starting at the provided path to an output json result.'
 author: 'adairrr'
 inputs:
   search-path:

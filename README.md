@@ -43,7 +43,15 @@ jobs:
           search-path: .github
           max-depth: 5
           only-dirs: false
-#          extension: ".yml"
+          end-with-array: true
+  #          extension: ".yml"
+
+  test:
+    needs: list-files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the output tree
+        run: echo ${{ needs.list-files.outputs.tree }}
 ```
 Output generated for the above yaml file (in this repository):
 

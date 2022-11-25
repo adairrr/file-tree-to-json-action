@@ -2,7 +2,7 @@
   "name": "file-tree-to-json-action",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "An action to write the directory structure starting at the provided path to an output json result.",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/adairrr/file-tree-to-json-action.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "",
+  "author": "adairrr",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.10.0",
