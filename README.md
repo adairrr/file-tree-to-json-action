@@ -3,12 +3,13 @@
 GitHub action to tree files in the repository and convert them to JSON.
 
 ## Inputs
-| Input                           | Description                         |
-|---------------------------------|-------------------------------------|
-| `search-path` (required)        | Path to search files                |
-| `max-depth`  (optional => 10)   | Depth of tree to search             |
-| `only-dirs` (optional => false) | Only include directories in output? |
-| `extension`  (optional)         | File extension to match             |
+| Input                           | Description                                |
+|---------------------------------|--------------------------------------------|
+| `search-path` (required)        | Path to search files                       |
+| `max-depth`  (optional => 10)   | Depth of tree to search                    |
+| `only-dirs` (optional => false) | Only include directories in output?        |
+| `extension`  (optional)         | File extension to match                    |
+| `end-with-array`  (optional)    | Whether the final depth should be an array |
 
 ## Outputs
 
@@ -33,7 +34,7 @@ jobs:
   list-files:
     runs-on: ubuntu-latest
     outputs:
-      paths: ${{ steps.list-files.outputs.paths }}
+      paths: ${{ steps.list-files.outputs.tree }}
     steps:
       - name: List Files
         id: list-files

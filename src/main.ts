@@ -47,6 +47,7 @@ async function traverse(
           : Object.fromEntries(finalTraversal.map(f => [f, {}]))
 
       } else {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         const traversal = await traverse(filePath, depth - 1, options)
         // end on an array for directories
